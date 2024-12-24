@@ -14,6 +14,7 @@ const CartStack = () => {
         headerTintColor: COLORS.white,
         headerBackTitle: 'Back',
         headerShadowVisible: false,
+        headerTitleAlign: 'center',
       })}>
       <Stack.Screen name="Cart" component={CartScreen} />
       <Stack.Screen name="Order" component={ConfirmOrderScreen} />

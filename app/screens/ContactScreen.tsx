@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {Platform, StyleSheet, Text, TextInput, View} from 'react-native';
 import {Formik} from 'formik';
 import COLORS from '../styles/colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -116,6 +116,11 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: 'center',
+    ...Platform.select({
+      android: {
+        paddingBottom: 20,
+      },
+    }),
   },
   headerText: {
     fontSize: 40,

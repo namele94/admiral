@@ -46,6 +46,7 @@ const AppNavigator = () => {
           component={HomeScreen}
           options={{
             ...DEFAULT_HEADER,
+            headerTitleAlign: 'center',
           }}
         />
         <Stack.Screen
@@ -53,6 +54,7 @@ const AppNavigator = () => {
           component={ReservationScreen}
           options={{
             ...DEFAULT_HEADER,
+            headerTitleAlign: 'center',
           }}
         />
         <Stack.Screen
@@ -60,6 +62,7 @@ const AppNavigator = () => {
           component={ContactScreen}
           options={{
             ...DEFAULT_HEADER,
+            headerTitleAlign: 'center',
           }}
         />
         <Stack.Screen
@@ -67,12 +70,16 @@ const AppNavigator = () => {
           component={EventsScreen}
           options={{
             ...DEFAULT_HEADER,
+            headerTitleAlign: 'center',
           }}
         />
         <Stack.Screen
           name="ReservationSuccessScreen"
           component={ReservationSuccessScreen}
-          options={{...DEFAULT_HEADER}}
+          options={{
+            ...DEFAULT_HEADER,
+            headerTitleAlign: 'center',
+          }}
         />
         <Stack.Screen
           name="Event"
@@ -80,7 +87,7 @@ const AppNavigator = () => {
           component={EventScreen}
           options={{
             ...DEFAULT_HEADER,
-            title: 'Events',
+            headerTitleAlign: 'center',
           }}
         />
       </Stack.Navigator>

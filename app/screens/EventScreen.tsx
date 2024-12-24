@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import COLORS from '../styles/colors.ts';
@@ -84,6 +84,11 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: 'center',
+    ...Platform.select({
+      android: {
+        paddingBottom: 20,
+      },
+    }),
   },
   image: {
     width: '100%',
